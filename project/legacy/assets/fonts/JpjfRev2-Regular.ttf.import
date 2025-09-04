@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://brcleavgh0hcx"
-path="res://.godot/imported/JpjfRev2-Regular.ttf-3ce6ba0425cdce173097d5b70db0ddf9.fontdata"
+path="res://.godot/imported/JpjfRev2-Regular.ttf-ab301f0434708133bf2816c9fe29cb2c.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/JpjfRev2-Regular.ttf"
-dest_files=["res://.godot/imported/JpjfRev2-Regular.ttf-3ce6ba0425cdce173097d5b70db0ddf9.fontdata"]
+source_file="res://legacy/assets/fonts/JpjfRev2-Regular.ttf"
+dest_files=["res://.godot/imported/JpjfRev2-Regular.ttf-ab301f0434708133bf2816c9fe29cb2c.fontdata"]
 
 [params]
 
@@ -23,6 +23,7 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=1
+keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

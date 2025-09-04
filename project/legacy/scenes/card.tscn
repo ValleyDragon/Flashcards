@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bdfsge52fwu1f"]
 
-[ext_resource type="Script" path="res://scripts/card.gd" id="1_wxos3"]
-[ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://assets/fonts/nasin-nanpa-4.0.1.otf" id="1_y1pi3"]
+[ext_resource type="Script" uid="uid://4x3uqpxfj6o4" path="res://legacy/scripts/card.gd" id="1_wxos3"]
+[ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://legacy/assets/fonts/nasin-nanpa-4.0.1.otf" id="1_y1pi3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_psb0o"]
 font_size = 28

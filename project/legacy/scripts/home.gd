@@ -2,7 +2,7 @@ extends CanvasLayer
 
 var courses = ["pu", "toki pona app"]
 var selected = 0
-@onready var lessons = preload("res://assets/tokipona-flashcards.json")
+@onready var lessons = preload("res://legacy/assets/tokipona-flashcards.json")
 var current_lessons
 var lesson_selected = -1
 var lesson_type = 0

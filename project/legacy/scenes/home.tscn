@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cb740kth2dtbo"]
 
-[ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://assets/fonts/nasin-nanpa-4.0.1.otf" id="1_ap4p4"]
-[ext_resource type="Script" path="res://scripts/home.gd" id="1_lisbi"]
-[ext_resource type="FontFile" uid="uid://brcleavgh0hcx" path="res://assets/fonts/JpjfRev2-Regular.ttf" id="2_erd00"]
-[ext_resource type="PackedScene" uid="uid://b7molslfff2wm" path="res://scenes/flashcards.tscn" id="2_jdnb3"]
+[ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://legacy/assets/fonts/nasin-nanpa-4.0.1.otf" id="1_ap4p4"]
+[ext_resource type="Script" uid="uid://dijg0k7t1pyss" path="res://legacy/scripts/home.gd" id="1_lisbi"]
+[ext_resource type="FontFile" uid="uid://brcleavgh0hcx" path="res://legacy/assets/fonts/JpjfRev2-Regular.ttf" id="2_erd00"]
+[ext_resource type="PackedScene" uid="uid://b7molslfff2wm" path="res://legacy/scenes/flashcards.tscn" id="2_jdnb3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8unsf"]
 font = ExtResource("1_ap4p4")
@@ -85,6 +85,7 @@ alignment = 1
 autowrap_mode = 3
 item_count = 2
 popup/item_0/text = "hihi"
+popup/item_0/id = 0
 popup/item_1/text = "hoho"
 popup/item_1/id = 1
 
@@ -97,6 +98,7 @@ autowrap_mode = 3
 selected = 0
 item_count = 3
 popup/item_0/text = "Learn All"
+popup/item_0/id = 0
 popup/item_1/text = "Learn only Sitelen Pona"
 popup/item_1/id = 1
 popup/item_2/text = "Learn only Meanings"

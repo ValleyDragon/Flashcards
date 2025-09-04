@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://b7molslfff2wm"]
 
-[ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://assets/fonts/nasin-nanpa-4.0.1.otf" id="1_2lsmm"]
-[ext_resource type="Script" path="res://scripts/flashcards.gd" id="1_8mngu"]
-[ext_resource type="StyleBox" uid="uid://d4bwhuycor5jc" path="res://scenes/ike.tres" id="2_8s8vl"]
-[ext_resource type="PackedScene" uid="uid://bdfsge52fwu1f" path="res://scenes/card.tscn" id="2_skevj"]
-[ext_resource type="StyleBox" uid="uid://clk4ah5g37f4h" path="res://scenes/flip.tres" id="3_6ftae"]
-[ext_resource type="StyleBox" uid="uid://6m8p0vuacjdo" path="res://scenes/pona.tres" id="3_u7gry"]
-[ext_resource type="StyleBox" uid="uid://c2ax7b4rgr7sv" path="res://assets/close_button.tres" id="7_nvoyk"]
+[ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://legacy/assets/fonts/nasin-nanpa-4.0.1.otf" id="1_2lsmm"]
+[ext_resource type="Script" uid="uid://dt0tknti4mbrh" path="res://legacy/scripts/flashcards.gd" id="1_8mngu"]
+[ext_resource type="StyleBox" uid="uid://d4bwhuycor5jc" path="res://legacy/scenes/ike.tres" id="2_8s8vl"]
+[ext_resource type="PackedScene" uid="uid://bdfsge52fwu1f" path="res://legacy/scenes/card.tscn" id="2_skevj"]
+[ext_resource type="StyleBox" uid="uid://clk4ah5g37f4h" path="res://legacy/scenes/flip.tres" id="3_6ftae"]
+[ext_resource type="StyleBox" uid="uid://6m8p0vuacjdo" path="res://legacy/scenes/pona.tres" id="3_u7gry"]
+[ext_resource type="StyleBox" uid="uid://c2ax7b4rgr7sv" path="res://legacy/assets/close_button.tres" id="7_nvoyk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eott1"]
 bg_color = Color(0.601507, 0.406625, 0.0545112, 1)

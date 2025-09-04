@@ -11,7 +11,7 @@ enum FlashcardType { LATIN, SITELEN, BOTH }
 var definitions
 
 func _ready() -> void:
-	var file = FileAccess.open("res://assets/tokipona-definitions.json", FileAccess.READ)
+	var file = FileAccess.open("res://legacy/assets/tokipona-definitions.json", FileAccess.READ)
 	definitions = JSON.parse_string(file.get_as_text())
 	
 	refresh_display()
