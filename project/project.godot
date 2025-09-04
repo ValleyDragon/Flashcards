@@ -11,18 +11,13 @@ config_version=5
 [application]
 
 config/name="TokiPonaFlashcards"
-run/main_scene="res://legacy/scenes/home.tscn"
+run/main_scene="uid://bkjg0cen0sw21"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Scenescale="*res://scenescale.gd"
-
-[display]
-
-window/size/viewport_width=270
-window/size/viewport_height=600
 
 [editor]
 
