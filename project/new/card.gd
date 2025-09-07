@@ -1,11 +1,20 @@
 extends Control
 
+var flashcards = {
+	"text_to_text": [
+		{"text": ["question", "answer"]},
+		{"text": ["question", "answer"]},
+	]
+}
 
-# Called when the node enters the scene tree for the first time.
+func convert_flashcards(raw:Dictionary) -> Array:
+	var included_flashcard_types = raw.keys()
+	var converted = []
+	for type in included_flashcard_types:
+		var cards = raw[type]
+		for card in cards:
+			converted.append({"type": type, "data": card})
+	return converted
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	print(convert_flashcards(flashcards))
