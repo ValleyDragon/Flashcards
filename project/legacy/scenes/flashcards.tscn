@@ -17,7 +17,7 @@ bg_color = Color(0.600231, 0.180177, 0.150072, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnhn4"]
 bg_color = Color(0.221462, 0.351019, 0.0710477, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paygo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n8xn"]
 bg_color = Color(0.768899, 0.152366, 0.17674, 1)
 border_width_left = 6
 border_width_top = 6
@@ -28,7 +28,7 @@ corner_radius_top_right = 21
 corner_radius_bottom_right = 21
 corner_radius_bottom_left = 21
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_et7me"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3vip"]
 bg_color = Color(0.596078, 0.0980392, 0.12549, 1)
 border_width_left = 6
 border_width_top = 6
@@ -41,9 +41,9 @@ corner_radius_bottom_left = 21
 
 [sub_resource type="Theme" id="Theme_b6w12"]
 Button/fonts/font = ExtResource("1_2lsmm")
-Button/styles/hover = SubResource("StyleBoxFlat_paygo")
+Button/styles/hover = SubResource("StyleBoxFlat_4n8xn")
 Button/styles/normal = ExtResource("7_nvoyk")
-Button/styles/pressed = SubResource("StyleBoxFlat_et7me")
+Button/styles/pressed = SubResource("StyleBoxFlat_q3vip")
 
 [node name="Flashcards" type="Node2D"]
 script = ExtResource("1_8mngu")

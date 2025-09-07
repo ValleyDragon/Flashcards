@@ -1,0 +1,152 @@
+[gd_scene load_steps=15 format=3 uid="uid://cjhymku47jj8v"]
+
+[ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://legacy/assets/fonts/nasin-nanpa-4.0.1.otf" id="1_2a3af"]
+[ext_resource type="Script" uid="uid://boflxtmcueh6" path="res://new/card.gd" id="1_ubgv5"]
+[ext_resource type="StyleBox" uid="uid://c2ax7b4rgr7sv" path="res://legacy/assets/close_button.tres" id="2_yk4cx"]
+[ext_resource type="StyleBox" uid="uid://clk4ah5g37f4h" path="res://legacy/scenes/flip.tres" id="3_ee3oc"]
+[ext_resource type="Script" uid="uid://bakjtqi77fp0d" path="res://new/flashcard.gd" id="3_gc7xi"]
+[ext_resource type="StyleBox" uid="uid://d4bwhuycor5jc" path="res://legacy/scenes/ike.tres" id="4_gc7xi"]
+[ext_resource type="Script" uid="uid://gkwi08klug5c" path="res://new/text_to_text.gd" id="4_lcv5r"]
+[ext_resource type="StyleBox" uid="uid://6m8p0vuacjdo" path="res://legacy/scenes/pona.tres" id="5_lcv5r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubgv5"]
+bg_color = Color(0.601507, 0.406625, 0.0545112, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4w2j"]
+bg_color = Color(0.600231, 0.180177, 0.150072, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odcus"]
+bg_color = Color(0.221462, 0.351019, 0.0710477, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n8xn"]
+bg_color = Color(0.768899, 0.152366, 0.17674, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_color = Color(0.768627, 0.152941, 0.176471, 1)
+corner_radius_top_left = 21
+corner_radius_top_right = 21
+corner_radius_bottom_right = 21
+corner_radius_bottom_left = 21
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3vip"]
+bg_color = Color(0.596078, 0.0980392, 0.12549, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_color = Color(0.596078, 0.101961, 0.12549, 1)
+corner_radius_top_left = 21
+corner_radius_top_right = 21
+corner_radius_bottom_right = 21
+corner_radius_bottom_left = 21
+
+[sub_resource type="Theme" id="Theme_lcv5r"]
+Button/fonts/font = ExtResource("1_2a3af")
+Button/styles/hover = SubResource("StyleBoxFlat_4n8xn")
+Button/styles/normal = ExtResource("2_yk4cx")
+Button/styles/pressed = SubResource("StyleBoxFlat_q3vip")
+
+[node name="Card" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ubgv5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SideIndicator" type="Label" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Question:"
+
+[node name="Flashcard" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.87
+script = ExtResource("3_gc7xi")
+
+[node name="TextToText" type="VBoxContainer" parent="VBoxContainer/Flashcard"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.009
+offset_bottom = -0.0140381
+alignment = 1
+script = ExtResource("4_lcv5r")
+
+[node name="text1" type="Label" parent="VBoxContainer/Flashcard/TextToText"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="text2" type="Label" parent="VBoxContainer/Flashcard/TextToText"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="FlipCard" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="FlipCard" type="Button" parent="VBoxContainer/FlipCard"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.72
+theme_override_fonts/font = ExtResource("1_2a3af")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/hover = ExtResource("3_ee3oc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ubgv5")
+theme_override_styles/normal = ExtResource("3_ee3oc")
+text = "tan"
+
+[node name="BottomBarButtons" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="bad" type="Button" parent="VBoxContainer/BottomBarButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_2a3af")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/hover = ExtResource("4_gc7xi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x4w2j")
+theme_override_styles/normal = ExtResource("4_gc7xi")
+text = "ike"
+
+[node name="good" type="Button" parent="VBoxContainer/BottomBarButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_2a3af")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/hover = ExtResource("5_lcv5r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_odcus")
+theme_override_styles/normal = ExtResource("5_lcv5r")
+text = "pona"
+
+[node name="close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.733
+anchor_right = 0.999
+anchor_bottom = 0.093
+offset_left = 0.0899963
+offset_right = 0.269989
+offset_bottom = 0.199997
+theme = SubResource("Theme_lcv5r")
+theme_override_font_sizes/font_size = 36
+action_mode = 0
+text = "ala"
+
+[connection signal="pressed" from="VBoxContainer/FlipCard/FlipCard" to="VBoxContainer/Flashcard" method="_on_flip_card_pressed"]
