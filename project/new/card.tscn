@@ -150,3 +150,5 @@ action_mode = 0
 text = "ala"
 
 [connection signal="pressed" from="VBoxContainer/FlipCard/FlipCard" to="VBoxContainer/Flashcard" method="_on_flip_card_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomBarButtons/wrong" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomBarButtons/right" to="." method="_on_right_pressed"]
