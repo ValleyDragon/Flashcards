@@ -1,7 +1,4 @@
-text_to_text:
-  - text:
-    - question
-    - answer
-  - text:
-    - question
-    - answer
+cards:
+  text_to_text:
+    - text: ["question", answer]
+    - text: ["question2", "answer2"]

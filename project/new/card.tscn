@@ -115,7 +115,7 @@ layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
 
-[node name="bad" type="Button" parent="VBoxContainer/BottomBarButtons"]
+[node name="wrong" type="Button" parent="VBoxContainer/BottomBarButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_2a3af")
@@ -125,7 +125,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_x4w2j")
 theme_override_styles/normal = ExtResource("4_gc7xi")
 text = "ike"
 
-[node name="good" type="Button" parent="VBoxContainer/BottomBarButtons"]
+[node name="right" type="Button" parent="VBoxContainer/BottomBarButtons"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_2a3af")
