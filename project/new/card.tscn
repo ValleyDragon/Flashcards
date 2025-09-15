@@ -1,21 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://cjhymku47jj8v"]
+[gd_scene load_steps=14 format=3 uid="uid://djt55w024kv7j"]
 
 [ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://legacy/assets/fonts/nasin-nanpa-4.0.1.otf" id="1_2a3af"]
-[ext_resource type="Script" uid="uid://boflxtmcueh6" path="res://new/card.gd" id="1_ubgv5"]
 [ext_resource type="StyleBox" uid="uid://c2ax7b4rgr7sv" path="res://legacy/assets/close_button.tres" id="2_yk4cx"]
 [ext_resource type="StyleBox" uid="uid://clk4ah5g37f4h" path="res://legacy/scenes/flip.tres" id="3_ee3oc"]
-[ext_resource type="Script" uid="uid://bakjtqi77fp0d" path="res://new/flashcard.gd" id="3_gc7xi"]
+[ext_resource type="Script" uid="uid://bakjtqi77fp0d" path="res://new/card.gd" id="3_gc7xi"]
 [ext_resource type="StyleBox" uid="uid://d4bwhuycor5jc" path="res://legacy/scenes/ike.tres" id="4_gc7xi"]
 [ext_resource type="Script" uid="uid://gkwi08klug5c" path="res://new/text_to_text.gd" id="4_lcv5r"]
 [ext_resource type="StyleBox" uid="uid://6m8p0vuacjdo" path="res://legacy/scenes/pona.tres" id="5_lcv5r"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubgv5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgl11"]
 bg_color = Color(0.601507, 0.406625, 0.0545112, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4w2j"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3g1i"]
 bg_color = Color(0.600231, 0.180177, 0.150072, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odcus"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7r4xk"]
 bg_color = Color(0.221462, 0.351019, 0.0710477, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n8xn"]
@@ -40,7 +39,7 @@ corner_radius_top_right = 21
 corner_radius_bottom_right = 21
 corner_radius_bottom_left = 21
 
-[sub_resource type="Theme" id="Theme_lcv5r"]
+[sub_resource type="Theme" id="Theme_spqxy"]
 Button/fonts/font = ExtResource("1_2a3af")
 Button/styles/hover = SubResource("StyleBoxFlat_4n8xn")
 Button/styles/normal = ExtResource("2_yk4cx")
@@ -53,7 +52,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ubgv5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -106,7 +104,7 @@ size_flags_stretch_ratio = 1.72
 theme_override_fonts/font = ExtResource("1_2a3af")
 theme_override_font_sizes/font_size = 37
 theme_override_styles/hover = ExtResource("3_ee3oc")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ubgv5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dgl11")
 theme_override_styles/normal = ExtResource("3_ee3oc")
 text = "tan"
 
@@ -121,7 +119,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_2a3af")
 theme_override_font_sizes/font_size = 73
 theme_override_styles/hover = ExtResource("4_gc7xi")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_x4w2j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u3g1i")
 theme_override_styles/normal = ExtResource("4_gc7xi")
 text = "ike"
 
@@ -131,7 +129,7 @@ size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_2a3af")
 theme_override_font_sizes/font_size = 73
 theme_override_styles/hover = ExtResource("5_lcv5r")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_odcus")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7r4xk")
 theme_override_styles/normal = ExtResource("5_lcv5r")
 text = "pona"
 
@@ -144,11 +142,9 @@ anchor_bottom = 0.093
 offset_left = 0.0899963
 offset_right = 0.269989
 offset_bottom = 0.199997
-theme = SubResource("Theme_lcv5r")
+theme = SubResource("Theme_spqxy")
 theme_override_font_sizes/font_size = 36
 action_mode = 0
 text = "ala"
 
 [connection signal="pressed" from="VBoxContainer/FlipCard/FlipCard" to="VBoxContainer/Flashcard" method="_on_flip_card_pressed"]
-[connection signal="pressed" from="VBoxContainer/BottomBarButtons/wrong" to="." method="_on_wrong_pressed"]
-[connection signal="pressed" from="VBoxContainer/BottomBarButtons/right" to="." method="_on_right_pressed"]

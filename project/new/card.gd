@@ -1,32 +1,19 @@
 extends Control
 
-@onready var card = $VBoxContainer/Flashcard
+@onready var card_types = {
+	"text_to_text": $TextToText
+}
 
-var flashcards = []
-var weights = PackedFloat32Array([])
-var rng = RandomNumberGenerator.new()
+var current_card_type = "text_to_text"
+
+func switch_to_card(card: Dictionary) -> void:
+	current_card_type.hide() # hide the previous
+	current_card_type = card["type"]
+	card_types[current_card_type].show() 
+	card_types[current_card_type].build(card["data"])
 
 func _ready() -> void:
-	var flashcards = load_flashcards("res://flashcards/test.yaml")
+	$TextToText.build({"text":["This is the question", "This is the answer"]})
 
-func load_flashcards(path: String):
-	var file = FileAccess.open(path, FileAccess.READ)
-	var content = file.get_as_text()
-	var yaml_data = YAML.parse(content).get_data()
-	var converted = convert_flashcards(yaml_data)
-	return converted
-
-func convert_flashcards(raw:Dictionary) -> Array:
-	var included_flashcard_types = raw["cards"].keys()
-	var converted = []
-	for type in included_flashcard_types:
-		var cards = raw["cards"][type]
-		for card in cards:
-			converted.append({"type": type, "data": card})
-	return converted
-
-func new_card(correct: bool) -> void: 
-	var next_card = flashcards.pick_random()
-
-func _on_wrong_pressed() -> void: new_card(false)
-func _on_right_pressed() -> void: new_card(true)
+func _on_flip_card_pressed() -> void:
+	card_types[current_card_type].flip()
