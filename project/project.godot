@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="TokiPonaFlashcards"
+config/name="Flashcards"
+config/description="A new multipurpose learning app, loosely based on ilo-kama-sona"
 run/main_scene="uid://bkjg0cen0sw21"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -19,6 +20,7 @@ config/icon="res://icon.svg"
 
 Scenescale="*res://scenescale.gd"
 Mode="*res://new/mode.gd"
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 [editor]
 
@@ -27,7 +29,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/yaml/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/yaml/plugin.cfg")
 
 [rendering]
 

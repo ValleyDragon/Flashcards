@@ -5,6 +5,10 @@ script/source = "extends Control
 
 func _on_legacy_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://legacy/scenes/home.tscn\")
+
+
+func _on_new_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://new/standard_loader.tscn\")
 "
 
 [node name="TemporaryLandingPage" type="Control"]
@@ -34,3 +38,4 @@ size_flags_vertical = 3
 text = "New (alpha)"
 
 [connection signal="pressed" from="VBoxContainer/legacy" to="." method="_on_legacy_pressed"]
+[connection signal="pressed" from="VBoxContainer/new" to="." method="_on_new_pressed"]
