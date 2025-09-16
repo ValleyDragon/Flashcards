@@ -7,7 +7,8 @@ var weights = PackedFloat32Array([])
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
-	var flashcards = load_flashcards("res://flashcards/test.yaml")
+	flashcards = load_flashcards("res://flashcards/test.yaml")
+	new_card(true)
 
 func load_flashcards(path: String):
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -25,8 +26,11 @@ func convert_flashcards(raw:Dictionary) -> Array:
 			converted.append({"type": type, "data": card})
 	return converted
 
-func new_card(correct: bool) -> void: 
+func new_card(correct: bool) -> void:
+	 # do weights tweaking here
+	
 	var next_card = flashcards.pick_random()
+	card.switch_to_card(next_card)
 
 func _on_wrong_pressed() -> void: new_card(false)
 func _on_right_pressed() -> void: new_card(true)
