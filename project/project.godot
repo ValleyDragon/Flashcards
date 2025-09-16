@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Scenescale="*res://scenescale.gd"
 Mode="*res://new/mode.gd"
 DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 

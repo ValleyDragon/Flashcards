@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://djt55w024kv7j"]
+[gd_scene load_steps=15 format=3 uid="uid://djt55w024kv7j"]
 
 [ext_resource type="FontFile" uid="uid://bwa8te7bl27gf" path="res://legacy/assets/fonts/nasin-nanpa-4.0.1.otf" id="1_2a3af"]
 [ext_resource type="StyleBox" uid="uid://c2ax7b4rgr7sv" path="res://legacy/assets/close_button.tres" id="2_yk4cx"]
@@ -7,6 +7,27 @@
 [ext_resource type="StyleBox" uid="uid://d4bwhuycor5jc" path="res://legacy/scenes/ike.tres" id="4_gc7xi"]
 [ext_resource type="Script" uid="uid://gkwi08klug5c" path="res://new/text_to_text.gd" id="4_lcv5r"]
 [ext_resource type="StyleBox" uid="uid://6m8p0vuacjdo" path="res://legacy/scenes/pona.tres" id="5_lcv5r"]
+
+[sub_resource type="GDScript" id="GDScript_lcv5r"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_flashcard_change_sideindicator_side(side: Variant) -> void:
+	if side == Mode.QUESTION:
+		text = \"Question:\"
+	elif side == Mode.ANSWER:
+		text = \"Answer:\"
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgl11"]
 bg_color = Color(0.601507, 0.406625, 0.0545112, 1)
@@ -69,6 +90,7 @@ alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Question:"
+script = SubResource("GDScript_lcv5r")
 
 [node name="Flashcard" type="Control" parent="VBoxContainer"]
 layout_mode = 2
@@ -103,9 +125,9 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.72
 theme_override_fonts/font = ExtResource("1_2a3af")
 theme_override_font_sizes/font_size = 37
-theme_override_styles/hover = ExtResource("3_ee3oc")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dgl11")
 theme_override_styles/normal = ExtResource("3_ee3oc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dgl11")
+theme_override_styles/hover = ExtResource("3_ee3oc")
 text = "tan"
 
 [node name="BottomBarButtons" type="HBoxContainer" parent="VBoxContainer"]
@@ -118,9 +140,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_2a3af")
 theme_override_font_sizes/font_size = 73
-theme_override_styles/hover = ExtResource("4_gc7xi")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_u3g1i")
 theme_override_styles/normal = ExtResource("4_gc7xi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u3g1i")
+theme_override_styles/hover = ExtResource("4_gc7xi")
 text = "ike"
 
 [node name="right" type="Button" parent="VBoxContainer/BottomBarButtons"]
@@ -128,9 +150,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_2a3af")
 theme_override_font_sizes/font_size = 73
-theme_override_styles/hover = ExtResource("5_lcv5r")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_7r4xk")
 theme_override_styles/normal = ExtResource("5_lcv5r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7r4xk")
+theme_override_styles/hover = ExtResource("5_lcv5r")
 text = "pona"
 
 [node name="close" type="Button" parent="."]
@@ -147,4 +169,5 @@ theme_override_font_sizes/font_size = 36
 action_mode = 0
 text = "ala"
 
+[connection signal="change_sideindicator_side" from="VBoxContainer/Flashcard" to="VBoxContainer/TopBar/SideIndicator" method="_on_flashcard_change_sideindicator_side"]
 [connection signal="pressed" from="VBoxContainer/FlipCard/FlipCard" to="VBoxContainer/Flashcard" method="_on_flip_card_pressed"]

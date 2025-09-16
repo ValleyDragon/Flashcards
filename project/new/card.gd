@@ -1,5 +1,7 @@
 extends Control
 
+signal change_sideindicator_side(side) 
+
 @onready var card_types = {
 	"text_to_text": $TextToText
 }
@@ -17,3 +19,5 @@ func _ready() -> void:
 
 func _on_flip_card_pressed() -> void:
 	card_types[current_card_type].flip()
+	change_sideindicator_side.emit(card_types[current_card_type].mode)
+	
