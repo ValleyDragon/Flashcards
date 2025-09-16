@@ -13,7 +13,7 @@ config_version=5
 config/name="Flashcards"
 config/description="A new multipurpose learning app, loosely based on ilo-kama-sona"
 run/main_scene="uid://bkjg0cen0sw21"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
