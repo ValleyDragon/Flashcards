@@ -7,9 +7,9 @@ on:
 # NOTE: If your `project.godot` is at the repository root, set `PROJECT_PATH` below to ".".
 
 env:
-  GODOT_VERSION: 4.3
-  EXPORT_NAME: test-project
-  PROJECT_PATH: test-project
+  GODOT_VERSION: 4.5
+  EXPORT_NAME: project
+  PROJECT_PATH: project
 
 jobs:
   export-windows:
